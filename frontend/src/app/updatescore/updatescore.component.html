@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+  <select class="form-control" name="matchid" #matchid="ngModel" [(ngModel)]="match_score.match">
+    <option *ngFor="let matches of matchlist;" [ngValue]="matches.id">match no {{ matches.id }}</option>
+  </select>
+
+  <select class="form-control"  name="setid" #setid="ngModel" [(ngModel)]="match_score.set">
+    <option *ngFor="let sets of setlist" [ngValue]="sets.set_value">{{  sets.set_name }}</option>
+  </select>
+
+  Team 1 score: <input type="text" name="fname" [(ngModel)]="match_score.team1_score"><br>
+  Team 2 score: <input type="text" name="lname" [(ngModel)]="match_score.team2_score"><br>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

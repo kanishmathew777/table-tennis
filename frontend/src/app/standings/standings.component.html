@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Group</th>
+      <th>Played</th>
+      <th>Won</th>
+      <th>Lost</th>
+      <th>Point difference</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let groups of group_standings">
+      <th>{{ groups["image"]}}</th>
+      <th>{{ groups["name"] }}</th>
+      <th>{{ groups["number_of_matches_played"] }}</th>
+      <th>{{ groups["won"] }}</th>
+      <th>{{ groups["lost"] }}</th>
+      <th>{{ groups["point_difference"] }}</th>
+      <th>{{ groups["points"] }}</th>
+    </tr>
+  </tbody>
+</table>

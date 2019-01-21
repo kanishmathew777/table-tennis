@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+  }
+  .no-padding {
+      padding: 0;
+  }
+  .no-margin {
+      margin: 0;
+  }
+  .display-flex {
+      display: -webkit-box;
+      display: -moz-box;
+      display: flexbox;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      -webkit-justify-content: center;
+       -webkit-box-pack: center;
+      -webkit-box-align: center;
+      -webkit-flex-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      -moz-box-align: center;
+      box-align: center;
+      -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &.flex-left {
+        justify-content: end;
+    }
+  }
+  .text-danger {
+    color: red;
+    font-size: 12px;
+  }
+  .align-center {
+    text-align: center;
+  }

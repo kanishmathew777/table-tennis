@@ -1,0 +1,67 @@
+$theme-color: #314559;
+.login-wrapper {
+  background-color: #314559;
+  height:100%;
+  .background {
+    width: 60%;  
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4% 0;
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 50px;
+    }
+    form {
+      .input-control {  
+        width: 300px;
+        padding: 5px 0;
+        border: none;
+        border-bottom: 1px solid #314559;
+        border-radius: 0;
+        font-size: 14px;
+        color: #314559;
+        background: transparent;
+        outline: none;
+      }
+      .text-input {
+        margin: 0% 0% 2% 0%;
+        &.password {
+          margin-top: 35px;
+        }
+      }
+      ::-webkit-input-placeholder {
+        color: #314559;
+      }
+      :-moz-placeholder {
+        color: #314559;
+      }
+      ::-moz-placeholder {
+        color: #314559;
+      }
+      :-ms-input-placeholder {
+        color: #314559;
+      }
+      .login-button {
+        width: 164px;
+        height: 47px;
+        margin-top: 25px;
+        background-color: #314559;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        outline: none;
+      }
+      .forgot-password {
+        margin-top: 14px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.51);
+        cursor: pointer;
+      }      
+    }
+  }
+}

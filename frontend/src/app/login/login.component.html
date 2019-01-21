@@ -1,0 +1,24 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#DF8500" type="ball-spin-clockwise-fade"></ngx-spinner>
+<div class="login-wrapper display-flex">
+  <div class="background">
+    <div>
+      <img class="logo" src="../assets/images/tt.jpeg" alt="logo" />
+    </div>
+    <form role="form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <div>
+        <div class="text-input">
+          <input type="text" class="input-control" placeholder="Username" formControlName="username" required />
+          <!-- <div class="text-danger" *ngIf="!loginForm.controls.email.valid && submitted && loginForm.controls.email.value">
+            Enter valid username
+          </div> -->
+          <!-- <div class="text-danger" *ngIf="loginForm.controls.email.value === '' && submitted">This field is mandatory</div> -->
+        </div>
+        <div class="text-input password">
+          <input type="password" class="input-control" placeholder="Password" formControlName="password" required />
+          <!-- <div class="text-danger" *ngIf="loginForm.controls.password.value === '' && submitted">This field is mandatory</div> -->
+        </div>
+      </div>
+      <button class="login-button" type="submit">LOGIN</button>
+    </form>
+  </div>
+</div>
