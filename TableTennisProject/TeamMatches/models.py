@@ -23,7 +23,7 @@ class Team(models.Model):
     group = models.ForeignKey(Group, blank=False, related_name='team_group', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return str('G - {}, T - {} '.format(self.group.name, self.name))
 
 
 class Match(models.Model):

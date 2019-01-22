@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken import views
 from TeamMatches.views import SetNameViewSet
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
@@ -25,4 +27,4 @@ urlpatterns = [
     path('matchdetails/', include('TeamMatches.urls')),
     path('api-token-auth/', views.obtain_auth_token),
     path('set_name_list/', SetNameViewSet.as_view()),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

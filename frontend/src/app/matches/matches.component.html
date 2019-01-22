@@ -8,12 +8,12 @@
   <div class="flex-container">
     <div class="left_container">
       <div class="group_name">{{ matchdata.group1 | uppercase }}</div>
-      <img class="group_logo" src='../assets/delhi.png'>
+      <img *ngIf="matchdata.group1_image" class="group_logo" [src]='matchdata.group1_image'>
       <div class="team_name">{{ getnames(matchdata.team1) | uppercase }}</div>
     </div>
     <div class="right_container">
       <div class="group_name">{{ matchdata.group2 | uppercase }}</div>
-      <img class="group_logo" src='../assets/chennai.jpeg'>
+      <img *ngIf="matchdata.group2_image" class="group_logo" [src]='matchdata.group2_image'>
       <div class="team_name">{{ getnames(matchdata.team2) | uppercase }}</div>
     </div>
   </div>

@@ -24,6 +24,9 @@ class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
 
+    def get_serializer_context(self):
+        return {'request': self.request}
+
 
 class SetViewSet(viewsets.ModelViewSet):
     queryset = Set.objects.all()
