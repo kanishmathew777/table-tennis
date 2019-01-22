@@ -25,4 +25,8 @@ export class MatchesService extends BaseWebService {
   updatescore(data): Observable<any> {
     return this.postMethod(`matchdetails/sets/`, data);
   }
+
+  getsetscore(match_id, set_name): Observable<any> {
+    return this.getMethod(`matchdetails/sets/?match=${match_id}&set_name=${set_name}`);
+  }
 }

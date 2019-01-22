@@ -12,8 +12,6 @@ team_list = TeamViewSet.as_view({'get': 'list', 'post': 'create'})
 
 match_list = MatchViewSet.as_view({'get': 'list', 'post': 'create'})
 
-set_list = SetViewSet.as_view({'get': 'list','post': 'create'})
-
 urlpatterns = [
     path('', include(router.urls)),
 ]

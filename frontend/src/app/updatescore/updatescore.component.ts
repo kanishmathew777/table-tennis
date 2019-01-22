@@ -41,7 +41,7 @@ export class UpdatescoreComponent implements OnInit {
   }
 
   onSubmit() {
-    if (typeof(this.match_score.match) === 'object' || typeof(this.match_score.set) === 'object') {
+    if (typeof (this.match_score.match) === 'object' || typeof (this.match_score.set_name) === 'object') {
       this.toastr.error('Match and set required', 'Enter valid match or set', { timeOut: 1000 });
     } else {
       this.matchservice.updatescore(this.match_score).subscribe(
@@ -64,6 +64,34 @@ export class UpdatescoreComponent implements OnInit {
     this.matchservice.setchoices().subscribe(
       data => {
         this.setlist = data;
+      },
+      error => {
+        let error_body = error.error;
+        if (!error.status) {
+          error_body = 'Failed To connect';
+        }
+        this.toastr.error('Connection Failed', error_body, { timeOut: 900 });
+      }
+    );
+  }
+
+  matchChange() {
+    if (typeof (this.match_score.set_name) !== 'object') {
+      this.updateinitialsetscore();
+    }
+  }
+
+  setChange() {
+    if (typeof (this.match_score.match) !== 'object') {
+      this.updateinitialsetscore();
+    }
+  }
+
+  updateinitialsetscore() {
+    this.matchservice.getsetscore(this.match_score.match, this.match_score.set_name).subscribe(
+      data => {
+        this.match_score.team1_score = data.team1_score;
+        this.match_score.team2_score = data.team2_score;
       },
       error => {
         let error_body = error.error;

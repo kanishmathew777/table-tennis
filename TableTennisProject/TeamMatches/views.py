@@ -31,16 +31,25 @@ class SetViewSet(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
 
-        if 'match' in request.query_params:
-            queryset = Set.objects.filter(match_id=request.query_params['match'])
+        if 'match' in request.query_params or 'set_name' in request.query_params:
+            if 'match' in request.query_params and 'set_name' in request.query_params:
+                obj, created = Set.objects.get_or_create(
+                    match_id=request.query_params['match'],
+                    set_name=request.query_params['set_name'],
+                    defaults={'match_id': request.query_params['match'],
+                              'set_name': request.query_params['set_name']},
+                )
+                new_serializer_data = SetSerializer(obj).data
+            elif 'match' in request.query_params:
+                queryset = Set.objects.filter(match_id=request.query_params['match'])
 
-            serializer_data = SetSerializer(queryset, many=True).data
-            set_details = list(serializer_data)
-            match_data = Match.objects.get(id=int(request.query_params['match'])).match_status
+                serializer_data = SetSerializer(queryset, many=True).data
+                set_details = list(serializer_data)
+                match_data = Match.objects.get(id=int(request.query_params['match'])).match_status
 
-            new_serializer_data = dict()
-            new_serializer_data['set_details'] = set_details
-            new_serializer_data['match_status'] = match_data
+                new_serializer_data = dict()
+                new_serializer_data['set_details'] = set_details
+                new_serializer_data['match_status'] = match_data
 
         else:
             queryset = self.queryset

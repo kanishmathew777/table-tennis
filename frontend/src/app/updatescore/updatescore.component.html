@@ -1,9 +1,9 @@
 <form (ngSubmit)="onSubmit()">
-  <select class="form-control" name="matchid" #matchid="ngModel" [(ngModel)]="match_score.match">
+  <select class="form-control" name="matchid" #matchid="ngModel" [(ngModel)]="match_score.match" (change)="matchChange()">
     <option *ngFor="let matches of matchlist;" [ngValue]="matches.id">match no {{ matches.id }}</option>
   </select>
 
-  <select class="form-control"  name="setid" #setid="ngModel" [(ngModel)]="match_score.set">
+  <select class="form-control"  name="setid" #setid="ngModel" [(ngModel)]="match_score.set_name" (change)="setChange()">
     <option *ngFor="let sets of setlist" [ngValue]="sets.set_value">{{  sets.set_name }}</option>
   </select>
 
