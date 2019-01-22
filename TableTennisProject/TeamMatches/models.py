@@ -46,5 +46,6 @@ class Set(models.Model):
     def __str__(self):
         return str('Match - {} ,  Set - {}'.format(self.match.id, self.set_name))
 
-    class meta:
-        ordering = ['set_name']
+    class Meta:
+        ordering = ["set_name"]
+        unique_together = ("match", "set_name")

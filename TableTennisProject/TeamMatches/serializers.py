@@ -15,6 +15,12 @@ class SetSerializer(serializers.ModelSerializer):
         fields = ('set_name', 'team2_score', 'team1_score', 'match', 'created', 'id')
         ordering = ['set_name']
 
+    def get_unique_together_validators(self):
+        '''
+        Overriding method to disable unique together checks
+        '''
+        return []
+
 
 class MatchSerializer(serializers.ModelSerializer):
     team1 = serializers.SerializerMethodField()
