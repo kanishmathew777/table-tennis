@@ -33,7 +33,7 @@ class Match(models.Model):
     match_status = models.IntegerField(choices=MATCH_CHOICES, default=1)
 
     def __str__(self):
-        return str(self.id)
+        return str('Match - {}'.format(self.id))
 
 
 class Set(models.Model):
@@ -44,4 +44,7 @@ class Set(models.Model):
     set_name = models.IntegerField(choices=SET_CHOICE, default=1)
 
     def __str__(self):
-        return str(self.id)
+        return str('Match - {} ,  Set - {}'.format(self.match.id, self.set_name))
+
+    class meta:
+        ordering = ['set_name']

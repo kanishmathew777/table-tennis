@@ -7,7 +7,7 @@
     <option *ngFor="let sets of setlist" [ngValue]="sets.set_value">{{  sets.set_name }}</option>
   </select>
 
-  Team 1 score: <input type="text" name="fname" [(ngModel)]="match_score.team1_score"><br>
-  Team 2 score: <input type="text" name="lname" [(ngModel)]="match_score.team2_score"><br>
+  Team 1 score: <input type="number" name="fname" [(ngModel)]="match_score.team1_score"><br>
+  Team 2 score: <input type="number" name="lname" [(ngModel)]="match_score.team2_score"><br>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>

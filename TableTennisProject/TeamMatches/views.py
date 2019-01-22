@@ -41,14 +41,12 @@ class SetViewSet(viewsets.ModelViewSet):
                 )
                 new_serializer_data = SetSerializer(obj).data
             elif 'match' in request.query_params:
-                queryset = Set.objects.filter(match_id=request.query_params['match'])
+                queryset = Set.objects.filter(match_id=request.query_params['match']).order_by('set_name')
 
-                serializer_data = SetSerializer(queryset, many=True).data
-                set_details = list(serializer_data)
                 match_data = Match.objects.get(id=int(request.query_params['match'])).match_status
 
                 new_serializer_data = dict()
-                new_serializer_data['set_details'] = set_details
+                new_serializer_data['set_details'] = SetSerializer(queryset, many=True).data
                 new_serializer_data['match_status'] = match_data
 
         else:
@@ -72,8 +70,7 @@ class SetViewSet(viewsets.ModelViewSet):
             set_serializer = SetSerializer(obj).data
             return Response(data=set_serializer, status=status.HTTP_200_OK)
         else:
-            return Response('HTTP_400_BAD_REQUEST', 'INVALID_CREATE',
-                            serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SetNameViewSet(APIView):
