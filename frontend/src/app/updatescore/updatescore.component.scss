@@ -1,0 +1,64 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.select-container {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.match {
+    padding: 5px;
+}
+
+.set {
+    padding: 5px;
+}
+
+.input_number {
+    padding: 5px;
+    
+}
+
+.inc_button {
+    border: none;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: green;
+    outline: none;
+}
+
+.dec_button {
+    border: none;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: red;
+    outline: none;
+}
+
+.submit_btn {
+    color: green;
+    
+}
+
+.submit_container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control,.team1,.team2 {
+    padding: 5px;
+}

@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.authtoken import views
-from TeamMatches.views import SetNameViewSet
 from django.conf.urls.static import static
 from django.conf import settings
+
+from rest_framework.authtoken import views
+
+from TeamMatches.views import SetNameViewSet
+from Users.views import TokenAdminView
 
 
 urlpatterns = [
@@ -27,4 +30,5 @@ urlpatterns = [
     path('matchdetails/', include('TeamMatches.urls')),
     path('api-token-auth/', views.obtain_auth_token),
     path('set_name_list/', SetNameViewSet.as_view()),
+    path('generate_token/', TokenAdminView.as_view())
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

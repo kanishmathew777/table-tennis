@@ -23,14 +23,15 @@ class Team(models.Model):
     group = models.ForeignKey(Group, blank=False, related_name='team_group', on_delete=models.CASCADE)
 
     def __str__(self):
-        return str('G - {}, T - {} '.format(self.group.name, self.name))
+        players = " / ".join(str(player.name) for player in self.players.all())
+        return str(players)
 
 
 class Match(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     team1 = models.ForeignKey(Team, blank=False, related_name="teamone", on_delete=models.CASCADE)
     team2 = models.ForeignKey(Team, blank=False, related_name="teamtwo", on_delete=models.CASCADE)
-    match_status = models.IntegerField(choices=MATCH_CHOICES, default=1)
+    match_status = models.IntegerField(choices=MATCH_CHOICES, default=3)
 
     def __str__(self):
         return str('Match - {}'.format(self.id))

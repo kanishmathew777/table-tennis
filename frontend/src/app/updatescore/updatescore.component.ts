@@ -12,6 +12,8 @@ import { UpdateScore } from './updatescore.interface';
 export class UpdatescoreComponent implements OnInit {
 
   public matchlist = [];
+  public team1_players = null;
+  public team2_players = null;
   public setlist = [];
   constructor(
     private matchservice: MatchesService,
@@ -92,6 +94,8 @@ export class UpdatescoreComponent implements OnInit {
       data => {
         this.match_score.team1_score = data.team1_score;
         this.match_score.team2_score = data.team2_score;
+        this.team1_players = data.team1_players;
+        this.team2_players = data.team2_players;
       },
       error => {
         let error_body = error.error;
@@ -101,5 +105,25 @@ export class UpdatescoreComponent implements OnInit {
         this.toastr.error('Connection Failed', error_body, { timeOut: 900 });
       }
     );
+  }
+
+  increment(field) {
+    if (field === 'team1') {
+      this.match_score.team1_score += 1;
+    } else if (field === 'team2') {
+      this.match_score.team2_score += 1;
+    }
+  }
+
+  decrement(field) {
+    if (field === 'team1') {
+      this.match_score.team1_score -= 1;
+    } else if (field === 'team2') {
+      this.match_score.team2_score -= 1;
+    }
+  }
+
+  getnames(nameslist) {
+    return nameslist.join(' / ');
   }
 }

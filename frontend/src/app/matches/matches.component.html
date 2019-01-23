@@ -17,7 +17,7 @@
       <div class="team_name">{{ getnames(matchdata.team2) | uppercase }}</div>
     </div>
   </div>
-  <div *ngFor="let set of setdata.set_details;">
+  <div *ngFor="let set of setdata.set_details;" class='score'>
     <div class="set_number"> Set - {{ set.set_name }}</div>
     <div class="flex-container">
         <div class="team_points">{{ set.team1_score }}</div>

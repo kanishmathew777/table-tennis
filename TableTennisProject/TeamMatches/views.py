@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 
 from .models import Team, Match, Set, SET_CHOICE
 from .serializers import TeamSerializer, MatchSerializer, SetSerializer
+from Users.models import Player
 
 from utils.mixins import error_msg_string
 
@@ -43,6 +44,13 @@ class SetViewSet(viewsets.ModelViewSet):
                               'set_name': request.query_params['set_name']},
                 )
                 new_serializer_data = SetSerializer(obj).data
+
+                team1_players = Player.objects.filter(player__id=obj.match.team1.id)
+                team2_players = Player.objects.filter(player__id=obj.match.team2.id)
+
+                new_serializer_data['team1_players'] = [players.name for players in team1_players]
+                new_serializer_data['team2_players'] = [players.name for players in team2_players]
+
             elif 'match' in request.query_params:
                 queryset = Set.objects.filter(match_id=request.query_params['match']).order_by('set_name')
 

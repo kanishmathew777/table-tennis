@@ -1,13 +1,12 @@
-from rest_framework.authtoken.models import Token
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from .models import Player, Group
 from .serializers import PlayerSerializer, GroupSerializer
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
+from rest_framework import status
 
-
-# Create your views here.
 
 class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all()
@@ -29,9 +28,10 @@ class LoginViewSet(APIView):
         return True
 
 
-# from django.contrib.auth.models import User
-# from rest_framework.authtoken.models import Token
-#
-# for user in User.objects.all():
-#     Token.objects.get_or_create(user=user)
+class TokenAdminView(APIView):
 
+    def get(self, request):
+        for user in User.objects.all():
+            Token.objects.get_or_create(user=user)
+
+        return Response(data="Successfull", status=status.HTTP_200_OK)

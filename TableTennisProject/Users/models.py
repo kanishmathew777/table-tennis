@@ -33,4 +33,4 @@ class Player(models.Model):
         ordering = ('created',)
 
     def __str__(self):
-        return self.email
+        return self.name

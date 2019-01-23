@@ -1,13 +1,33 @@
-<form (ngSubmit)="onSubmit()">
-  <select class="form-control" name="matchid" #matchid="ngModel" [(ngModel)]="match_score.match" (change)="matchChange()">
-    <option *ngFor="let matches of matchlist;" [ngValue]="matches.id">match no {{ matches.id }}</option>
-  </select>
-
-  <select class="form-control"  name="setid" #setid="ngModel" [(ngModel)]="match_score.set_name" (change)="setChange()">
-    <option *ngFor="let sets of setlist" [ngValue]="sets.set_value">{{  sets.set_name }}</option>
-  </select>
-
-  Team 1 score: <input type="number" name="fname" [(ngModel)]="match_score.team1_score"><br>
-  Team 2 score: <input type="number" name="lname" [(ngModel)]="match_score.team2_score"><br>
-  <button type="submit" class="btn btn-success">Submit</button>
-</form>
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="select-container">
+      <div class="match">
+        <label>Match:</label>
+        <select class="form-control" name="matchid" #matchid="ngModel" [(ngModel)]="match_score.match" (change)="matchChange()">
+          <option *ngFor="let matches of matchlist;" [ngValue]="matches.id">match no {{ matches.id }}</option>
+        </select>
+      </div>
+      <div class="set">
+        <label>Set:</label>
+        <select class="form-control"  name="setid" #setid="ngModel" [(ngModel)]="match_score.set_name" (change)="setChange()">
+          <option *ngFor="let sets of setlist" [ngValue]="sets.set_value">{{  sets.set_name }}</option>
+        </select>
+      </div>
+    </div>
+      
+    <div class="input_number">
+     {{ getnames(team1_players) }} :  <input type="number" class="team1" name="fname" [(ngModel)]="match_score.team1_score">
+      <button type="button" (click)="increment('team1')" class="inc_button">+</button>
+      <button type="button" (click)="decrement('team1')" class="dec_button">-</button>
+    </div>
+    <div class="input_number">
+      {{ getnames(team2_players) }} : <input type="number" class="team2" name="lname" [(ngModel)]="match_score.team2_score">
+      <button type="button" (click)="increment('team2')" class="inc_button">+</button>
+      <button type="button" (click)="decrement('team2')" class="dec_button">-</button>
+    </div>
+    <div class="submit_container">
+      <button type="submit" class="btn btn-success input_number">Submit</button>
+    </div>
+    
+    </form>
+</div>

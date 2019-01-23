@@ -36,22 +36,14 @@ class MatchSerializer(serializers.ModelSerializer):
                   'match_status', 'group1_image', 'group2_image')
 
     def get_team1(self, obj):
-        team = Team.objects.get(id=obj.team1.id)
+        team_players = Player.objects.filter(player__id=obj.team1.id)
 
-        player_list = []
-        for player in team.players.all():
-            player_list.append(player.name)
-
-        return player_list
+        return [players.name for players in team_players]
 
     def get_team2(self, obj):
-        team = Team.objects.get(id=obj.team2.id)
+        team_players = Player.objects.filter(player__id=obj.team2.id)
 
-        player_list = []
-        for player in team.players.all():
-            player_list.append(player.name)
-
-        return player_list
+        return [players.name for players in team_players]
 
     def get_group1(self, obj):
         team = Team.objects.get(id=obj.team1.id)
