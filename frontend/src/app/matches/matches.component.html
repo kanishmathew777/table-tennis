@@ -1,27 +1,33 @@
-<select (change)="matchChange($event.target.value)" #match>
+<select (change)="matchChange($event.target.value)" #match class="match-list">
   <option value="default_select" selected>Select a match</option> 
   <option *ngFor="let matches of matchlist;" [value]="matches.id" >match no {{ matches.id }}</option>
 </select>
 
 <div *ngIf="matchdata && setdata">
-  <div>{{ show_status(matchdata.match_status) }}</div>
+  <div class="status {{ show_status(matchdata.match_status) | lowercase }}">{{ show_status(matchdata.match_status) }}</div>
   <div class="flex-container">
     <div class="left_container">
       <div class="group_name">{{ matchdata.group1 | uppercase }}</div>
-      <img *ngIf="matchdata.group1_image" class="group_logo" [src]='matchdata.group1_image'>
+      <div class="img-wrap">
+          <img *ngIf="matchdata.group1_image" class="group_logo" [src]='matchdata.group1_image'>
+      </div>
       <div class="team_name">{{ getnames(matchdata.team1) | uppercase }}</div>
     </div>
     <div class="right_container">
       <div class="group_name">{{ matchdata.group2 | uppercase }}</div>
-      <img *ngIf="matchdata.group2_image" class="group_logo" [src]='matchdata.group2_image'>
+      <div class="img-wrap">
+          <img *ngIf="matchdata.group2_image" class="group_logo" [src]='matchdata.group2_image'>
+      </div>
       <div class="team_name">{{ getnames(matchdata.team2) | uppercase }}</div>
     </div>
   </div>
-  <div *ngFor="let set of setdata.set_details;" class='score'>
-    <div class="set_number"> Set - {{ set.set_name }}</div>
-    <div class="flex-container">
-        <div class="team_points">{{ set.team1_score }}</div>
-        <div class="team_points">{{ set.team2_score }}</div>
+  <div class="score-wrap">
+    <div *ngFor="let set of setdata.set_details;">
+      <div class="set_number"> Set - {{ set.set_name }}</div>
+      <div class="flex-container">
+          <div class="team_points">{{ set.team1_score }}</div>
+          <div class="team_points">{{ set.team2_score }}</div>
+      </div>
     </div>
   </div>
 </div>

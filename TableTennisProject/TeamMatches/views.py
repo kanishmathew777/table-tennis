@@ -9,6 +9,10 @@ from rest_framework.views import APIView
 from .models import Team, Match, Set, SET_CHOICE
 from .serializers import TeamSerializer, MatchSerializer, SetSerializer
 from Users.models import Player
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+
+from rest_framework.decorators import authentication_classes, permission_classes
 
 from utils.mixins import error_msg_string
 
@@ -66,6 +70,8 @@ class SetViewSet(viewsets.ModelViewSet):
 
         return Response(data=new_serializer_data, status=status.HTTP_200_OK)
 
+    @authentication_classes(TokenAuthentication,)
+    @permission_classes(IsAuthenticated,)
     def create(self, request, *args, **kwargs):
         serializer = SetSerializer(data=request.data)
         if serializer.is_valid():

@@ -83,6 +83,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/image_preprocessing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/initial_steps/intial_step.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/process_start/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Music/TableTennisProject/TeamMatches/serializers.py">
           <value>
             <set />

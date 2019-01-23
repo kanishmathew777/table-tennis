@@ -77,7 +77,7 @@ export class MatchesComponent implements OnInit {
   }
 
   private updatesets(matchid): any {
-    this.processCompletionId = setInterval(() => { this.getsetdata(matchid, true); }, 5000);
+    this.processCompletionId = setInterval(() => { this.getsetdata(matchid, true); }, 4000);
   }
 
   getsetdata(matchid, checking?) {
