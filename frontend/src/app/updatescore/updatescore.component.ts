@@ -43,9 +43,7 @@ export class UpdatescoreComponent implements OnInit {
   }
 
   onSubmit() {
-    if (typeof (this.match_score.match) === 'object' || typeof (this.match_score.set_name) === 'object') {
-      this.toastr.error('Match and set required', 'Enter valid match or set', { timeOut: 1000 });
-    } else {
+    if (this.checkmatchset()) {
       this.matchservice.updatescore(this.match_score).subscribe(
         data => {
           this.toastr.success('Successfull', 'Updated Successfully', { timeOut: 400 });
@@ -109,21 +107,41 @@ export class UpdatescoreComponent implements OnInit {
 
   increment(field) {
     if (field === 'team1') {
-      this.match_score.team1_score += 1;
+      if (this.checkmatchset()) {
+        this.match_score.team1_score += 1;
+        this.onSubmit();
+      }
     } else if (field === 'team2') {
-      this.match_score.team2_score += 1;
+      if (this.checkmatchset()) {
+        this.match_score.team2_score += 1;
+        this.onSubmit();
+      }
     }
   }
 
   decrement(field) {
     if (field === 'team1') {
-      this.match_score.team1_score -= 1;
+      if (this.checkmatchset()) {
+        this.match_score.team1_score -= 1;
+        this.onSubmit();
+      }
     } else if (field === 'team2') {
-      this.match_score.team2_score -= 1;
+      if (this.checkmatchset()) {
+        this.match_score.team2_score -= 1;
+        this.onSubmit();
+      }
     }
   }
 
   getnames(nameslist) {
     return nameslist.join(' / ');
+  }
+
+  checkmatchset() {
+    if (typeof (this.match_score.match) === 'object' || typeof (this.match_score.set_name) === 'object') {
+      this.toastr.error('Match and set required', 'Enter valid match or set', { timeOut: 1000 });
+      return false;
+    }
+    return true;
   }
 }
