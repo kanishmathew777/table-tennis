@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Dockerfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TableTennisProject/receiver.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TableTennisProject/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TableTennisProject/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/__init__.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/admin.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/apps.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/migrations/0004_auto_20190117_1354.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/receiver.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/signals.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TeamMatches/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Users/models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Users/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Users/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/manage.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/proj_settings/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/proj_settings/wsgi.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/requirements.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/start.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/utils/mixins.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/amazons3/lambda.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/config_fields_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/dental_deenr_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/dental_dtf_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/star_kids_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/star_plus_spenrd_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/star_plus_spenrm_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/constants/star_stenrtp_field_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/config_file.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/constant_form_names.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/dental_deenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/dental_dtf.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/form_names_constants.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/star_kids.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/star_plus_spenrd.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/star_plus_spenrm.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/star_stenr.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/cropping_config_file/star_stenrtp.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/image_preprocessing/image_utils.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/initial_steps/intial_step.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/process_start/start.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/cropping_approach/utils/background_removal.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/image_processing_backend/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/image_processing_backend/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/admin.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/consumers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/routing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/templates/example/a _base.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/templates/example/user_list.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../image_processing_proj/backend/image_processing_backend/websocketcnctn/views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/client.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/image_transfer_pb2.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/image_transfer_pb2_grpc.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/protos/image_transfer.proto">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/GRPC_Projects/grpc/examples/python/image_transfer/server.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Music/TableTennisProject/TeamMatches/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/Stargramz/users/authenticate_views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Socket_proj/Rapid-ChatXChannels-master/src/cfehome/custom_authentication.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Socket_proj/Rapid-ChatXChannels-master/src/cfehome/routing.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Socket_proj/Rapid-ChatXChannels-master/src/cfehome/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Socket_proj/Rapid-ChatXChannels-master/src/cfehome/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Socket_proj/Rapid-ChatXChannels-master/src/chat/consumers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/miniconda3/envs/image_processing_proj_env/lib/python3.6/site-packages/channels/management/commands/runserver.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/miniconda3/envs/image_processing_proj_env/lib/python3.6/site-packages/django/core/handlers/base.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
