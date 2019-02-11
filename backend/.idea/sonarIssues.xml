@@ -103,6 +103,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/proj_settings/db_settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/proj_settings/settings.py">
           <value>
             <set />
@@ -324,6 +329,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Projects/Stargramz/users/authenticate_views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/icr_maximus/maximus_poc_icr_handwriting_recognition/backend/icr_backend/icr_backend/settings/production.py">
           <value>
             <set />
           </value>

@@ -10,8 +10,6 @@ COPY start.sh /backend/start.sh
 
 COPY . /backend
 
-RUN python manage.py migrate
-
 # Make port 80 available to the world outside this container
 EXPOSE 8000
 
