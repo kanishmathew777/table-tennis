@@ -1,4 +1,4 @@
-FROM library/postgres
+FROM library/postgres:9.6.11
 
 EXPOSE 5432
 
